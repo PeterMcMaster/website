@@ -54,7 +54,7 @@ export default function Hero() {
       >
         {/* Photo — left */}
         <motion.div variants={item} className="shrink-0">
-          <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-2xl ring-2 ring-blue-200 ring-offset-4 ring-offset-slate-50 overflow-hidden shadow-xl">
+          <div className="relative w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-2xl ring-2 ring-blue-200 ring-offset-4 ring-offset-slate-50 overflow-hidden shadow-xl">
             <Image
               src="/profile.jpg"
               alt="Peter McMaster"
@@ -66,29 +66,30 @@ export default function Hero() {
         </motion.div>
 
         {/* Text — right */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left w-full min-w-0">
           <motion.h1
             variants={item}
-            className="text-5xl sm:text-6xl font-bold tracking-tight text-slate-900 leading-[1.05] mb-3"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 leading-[1.05] mb-3"
           >
             Peter McMaster
           </motion.h1>
 
-          <motion.p variants={item} className="text-lg text-slate-500 font-medium mb-2">
+          <motion.p variants={item} className="text-base sm:text-lg text-slate-500 font-medium mb-2">
             {personal.title}
           </motion.p>
 
-          <motion.p
-            variants={item}
-            className="text-sm text-slate-400 font-medium mb-8 whitespace-nowrap overflow-x-auto"
-          >
-            {personal.tagline}
-          </motion.p>
+          <motion.div variants={item} className="flex flex-wrap justify-center md:justify-start gap-x-3 gap-y-1 mb-8">
+            {personal.tagline.split(" · ").map((tag) => (
+              <span key={tag} className="text-sm text-slate-400 font-medium">
+                {tag}
+              </span>
+            ))}
+          </motion.div>
 
           <motion.div variants={item} className="flex flex-wrap items-center justify-center md:justify-start gap-3">
             <a
               href={`mailto:${personal.email}`}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 bg-white hover:border-blue-300 text-slate-700 text-sm font-medium transition-colors shadow-sm"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 bg-white hover:border-blue-300 text-slate-700 text-sm font-medium transition-colors shadow-sm min-w-0 truncate max-w-[260px]"
             >
               {personal.email}
             </a>
