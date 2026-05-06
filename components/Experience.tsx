@@ -76,7 +76,18 @@ export default function Experience() {
                         <h3 className="text-slate-900 font-semibold text-lg leading-tight">
                           {exp.role}
                         </h3>
-                        <p className="text-blue-600 font-medium mt-0.5">{exp.company}</p>
+                        {exp.website ? (
+                          <a
+                            href={exp.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 font-medium mt-0.5 hover:underline inline-block"
+                          >
+                            {exp.company}
+                          </a>
+                        ) : (
+                          <p className="text-blue-600 font-medium mt-0.5">{exp.company}</p>
+                        )}
                       </div>
                     </div>
                     <div className="flex flex-col sm:items-end gap-1 text-slate-400 text-sm shrink-0">

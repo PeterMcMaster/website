@@ -19,6 +19,7 @@ export type Experience = {
   end: string;
   description: string;
   logo?: string;
+  website?: string;
 };
 
 export const experiences: Experience[] = [
@@ -30,6 +31,7 @@ export const experiences: Experience[] = [
     end: "Present",
     description: "Incoming software engineer.",
     logo: "/logos/profound.png",
+    website: "https://tryprofound.com",
   },
   {
     company: "Astera Holdings",
@@ -40,6 +42,7 @@ export const experiences: Experience[] = [
     description:
       "Built an LLM-based classifier and routing pipeline with LangChain and Perplexity/MCP tooling to dispatch user inputs to the correct agents, improving routing accuracy by 50% and cutting query latency by 10%.",
     logo: "/logos/astera.png",
+    website: "https://www.astera.holdings/",
   },
   {
     company: "Guardian RF",
@@ -50,6 +53,7 @@ export const experiences: Experience[] = [
     description:
       "Led end-to-end delivery of a React Native + Flask app for real-time multi-drone tracking, shipping geofencing, JWT auth, and Socket.IO telemetry scaled to 100+ events/sec — deployed to 5+ agencies including police departments and airports.",
     logo: "/logos/guardianrf.png",
+    website: "https://www.guardianrf.com/",
   },
   {
     company: "Flatiron Institute, Simons Foundation",
@@ -60,6 +64,7 @@ export const experiences: Experience[] = [
     description:
       "Modernized Corrfunc, an open-source cosmology library, with pybind11 C++ wrappers, Meson builds, and pip-installable wheels, reducing runtime by 15% and eliminating complex setup for downstream researchers.",
     logo: "/logos/flatiron.png",
+    website: "https://www.simonsfoundation.org/flatiron/",
   },
   {
     company: "Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo",
@@ -70,6 +75,7 @@ export const experiences: Experience[] = [
     description:
       "Developed a NumPy/SciPy pipeline simulating 30+ gravitational-wave network models across 300 events, analyzing 10k+ detections to improve predicted signal localization accuracy by 30%.",
     logo: "/logos/utokyo.png",
+    website: "https://www.ipmu.jp/",
   },
   {
     company: "Columbia Astrophysics Laboratory",
@@ -80,6 +86,7 @@ export const experiences: Experience[] = [
     description:
       "Led a research project under Professor Frits Paerels investigating the use of electromagnetic counterparts to gravitational wave events to improve multi-messenger source localization accuracy.",
     logo: "/logos/columbia.png",
+    website: "https://www.astro.columbia.edu/content/astrophysics-lab",
   },
 ];
 
